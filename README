@@ -1,0 +1,8 @@
+Test case for https://github.com/jmockit/jmockit1/issues/582
+(Wrong super constructor is called)
+
+Fails with OpenJDK 11.0.2, but not Oracle JDK 8.
+Tested on Windows 10 64bit only.
+
+Reproduce via
+JAVA_HOME="C:/Program Files/Java/jdk-11.0.2" ./gradlew test

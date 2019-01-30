@@ -1,0 +1,18 @@
+plugins {
+   id 'java'
+}
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   testCompile 'javax.faces:javax.faces-api:2.3'
+   testCompile 'org.jmockit:jmockit:1.45'
+   testCompile 'junit:junit:4.12'
+}
+
+test {
+   def jar = configurations.testCompile.find { it.name.startsWith("jmockit") }
+   jvmArgs "-javaagent:$jar"
+}
