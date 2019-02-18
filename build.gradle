@@ -4,11 +4,15 @@ plugins {
 
 repositories {
    mavenCentral()
+   maven {
+      name 'JitPack'
+      url 'https://jitpack.io'
+   }
 }
 
 dependencies {
-   testCompile 'javax.faces:javax.faces-api:2.3'
-   testCompile 'org.jmockit:jmockit:1.45'
+//   testCompile 'org.jmockit:jmockit:1.45'
+   testCompile 'com.github.jmockit:jmockit1:master-SNAPSHOT'
    testCompile 'junit:junit:4.12'
 }
 
